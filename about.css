@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#bgCarousel {
+    position: relative;
+    z-index: 1;
+}
+.navbar-container {
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   color: white;
+    z-index: 10; 
+}
+
+.child1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.child1 h3 {
+    font-size: 40px;
+}
+.child1 p {
+    font-size: 15px;
+}
+.child2 {
+    list-style: none;
+    display: flex;
+    margin-right:10%;
+    gap: 50px;
+    font-size: 20px;
+}
+
+ .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 66%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 5;
+ }
+ .child2 li a{
+    text-decoration-line: none;
+    color: white;
+}
+.child2 li a:hover{
+     color:rgb(148, 203, 247);
+}
+#check{
+    display:none;
+}
+.menu-btn i{
+    display:none;
+}
+ .content{
+    position:absolute;
+    top:200px;
+    left: 55%;
+    color:white;
+    z-index: 10;
+}
+.para1,.para2,.para3,.para4{
+  display:flex;
+  justify-content: space-evenly;
+  gap:20px;
+}
+.footer{
+    position:absolute;
+    bottom: 20px;
+    left: 65%;
+    color:white;
+    z-index: 20;
+}
+#bgCarousel .carousel-indicators {
+    position: absolute;
+    bottom: 80px;      
+    left: 5%;          
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+    z-index: 20;        
+}
+
+ #bgCarousel .carousel-indicators button {
+    width: 14px;
+    height: 14px;
+    background: #ffffff !important;
+    opacity: 0.4 !important;
+    border-radius: 0;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+}
+#bgCarousel .carousel-indicators .active {
+    opacity: 1 !important;
+}
+#bgCarousel .carousel-indicators button {
+    display: block;
+}
+@media screen and (max-width: 995px) {
+
+    .menu-btn i {
+        display: block;
+        font-size: 26px;
+        padding: 12px 18px;
+        background: #555;
+        color: white;
+        clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+        z-index:1500;
+    }
+
+    .carousel-item img {
+        height: 150vh;
+    }
+
+    .child2 {
+        position: absolute;
+        top: 90px;
+        right: 10px;
+        width: 150px;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+    .child2 li a {
+        color: white;
+        font-size: 18px;
+    }
+   .child2 li:first-child {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .child2 li:first-child a {
+        color: #8fe3ff;
+    }
+    #check {
+        display: none;
+    }
+
+    #check:checked ~ .child2 {
+        display: flex;
+    }
+    .carousel-item img {
+        min-height: 160vh;
+    }
+    
+}
+@media screen and (max-width: 750px) {
+    .overlay {
+        display: block;
+        width: 100%;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+    .content {
+        left: 8%;
+        right: 8%;
+        top: 20%;
+    }
+    #bgCarousel .carousel-indicators{
+        left: 250px;
+        bottom: 150px;
+    }
+    .footer{
+        left: 200px;
+    }
+}
+
